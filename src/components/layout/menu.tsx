@@ -32,7 +32,7 @@ const Menu =() => {
                 <nav
                     id="primary-menu"
                     aria-label="Primary"
-                    className="fixed left-0 top-20 w-full h-[calc(100vh-80px)] bg-black text-white flex flex-col items-center justify-start gap-8 py-8 text-xl z-50 md:hidden"
+                    className="fixed left-0 top-20 w-full h-[calc(100vh-80px)] bg-secondary text-secondary-foreground flex flex-col items-center justify-start gap-8 py-8 text-xl z-50 md:hidden"
                     role="dialog"
                     aria-modal="true"
                 >

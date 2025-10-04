@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/check-node.js",
     "dev": "next dev --turbopack",
+    "prebuild": "node scripts/check-node.js",
     "build": "next build --turbopack",
+    "prestart": "node scripts/check-node.js",
     "start": "next start",
     "lint": "eslint"
   },
+  "engines": {
+    "node": ">=18.18.0 <24",
+    "npm": ">=9"
+  },
   "dependencies": {
     "next": "15.5.4",
-    "nodejs": "^0.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

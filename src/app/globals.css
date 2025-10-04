@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
 :root {
+  /* Base color tokens */
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #0ea5e9;
+  --primary-foreground: #ffffff;
+
+  --secondary: #111827;
+  --secondary-foreground: #ffffff;
+
+  --accent: #22c55e;
+  --accent-foreground: #052e16;
+
+  --muted: #9ca3af;
+  --muted-foreground: #111827;
+
+  --border: #e5e7eb;
+  --ring: #0ea5e9;
 }
 
 @theme inline {
+  /* Expose colors to Tailwind utilities (bg-*, text-*, etc.) */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --ring: var(--ring);
+
+  /* Fonts: map Next/font CSS variables to Tailwind font utilities */
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --primary: #38bdf8; /* sky-400 */
+    --primary-foreground: #082f49; /* sky-950 */
+
+    --secondary: #0b1220; /* slightly lighter than black for panels */
+    --secondary-foreground: #f9fafb;
+
+    --accent: #4ade80; /* green-400 */
+    --accent-foreground: #052e16;
+
+    --muted: #6b7280; /* gray-500 */
+    --muted-foreground: #e5e7eb;
+
+    --border: #1f2937; /* gray-800 */
+    --ring: #38bdf8;
   }
+}
+
+/* Base styles */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  text-rendering: optimizeLegibility;
+}
+
+/* Utility: display font for logos/headings */
+.font-display {
+  font-family: var(--font-display), var(--font-sans), ui-sans-serif, system-ui,
+    -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
 }
