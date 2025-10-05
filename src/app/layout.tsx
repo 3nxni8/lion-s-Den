@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { fonts } from "../constants";
+import { CartProvider } from "../components/cart/CartContext";
 
 export const metadata: Metadata = {
   title: "LionDen",
@@ -15,9 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fonts.sans.variable} ${fonts.display.variable} antialiased`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

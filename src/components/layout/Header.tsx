@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Menu from './menu';
-import NavbarIcons from './NavbarIcons';
+import NavbarIcons from '../ui/NavbarIcons';
 
 const Header = () => {
   return (
