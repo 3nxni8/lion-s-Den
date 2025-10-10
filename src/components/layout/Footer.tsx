@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-secondary-foreground border-t border-border mt-16">
+    <footer className="bg-background text-foreground border-t border-border mt-50">
       <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 py-12">
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand + blurb + newsletter */}
@@ -14,7 +14,7 @@ const Footer = () => {
             <Link href="/" className="inline-block">
               <div className="text-2xl font-bold font-display">LION&apos;S DEN</div>
             </Link>
-            <p className="mt-3 text-sm text-secondary-foreground/80 max-w-xs">
+            <p className="mt-3 text-sm text-foreground/80 max-w-xs">
               Premium gear at roaring prices. Discover quality products and exclusive deals every day.
             </p>
 
@@ -43,7 +43,7 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
-              <p className="mt-2 text-xs text-secondary-foreground/70">
+              <p className="mt-2 text-xs text-foreground/70">
                 By subscribing, you agree to our Terms and Privacy Policy.
               </p>
             </form>
@@ -53,11 +53,11 @@ const Footer = () => {
           <nav aria-label="Shop" className="text-sm">
             <h3 className="font-semibold text-base">Shop</h3>
             <ul className="mt-3 space-y-2">
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/products">All Products</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/category">Categories</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/products">New Arrivals</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/products">Best Sellers</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/products">On Sale</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/products">All Products</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/category">Categories</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/products">New Arrivals</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/products">Best Sellers</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/products">On Sale</Link></li>
             </ul>
           </nav>
 
@@ -65,11 +65,11 @@ const Footer = () => {
           <nav aria-label="Help" className="text-sm">
             <h3 className="font-semibold text-base">Help</h3>
             <ul className="mt-3 space-y-2">
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/login">Your Account</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/cart">Cart</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/checkout">Checkout</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/contact">Support</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/about">FAQs</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/login">Your Account</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/cart">Cart</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/checkout">Checkout</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/contact">Support</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/about">FAQs</Link></li>
             </ul>
           </nav>
 
@@ -77,17 +77,17 @@ const Footer = () => {
           <nav aria-label="Company" className="text-sm">
             <h3 className="font-semibold text-base">Company</h3>
             <ul className="mt-3 space-y-2">
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/about">About Us</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/contact">Contact</Link></li>
-              <li><Link className="hover:underline text-secondary-foreground/85" href="/category">Our Categories</Link></li>
-              <li><a className="hover:underline text-secondary-foreground/85" href="#" aria-disabled>Careers</a></li>
-              <li><a className="hover:underline text-secondary-foreground/85" href="#" aria-disabled>Blog</a></li>
+              <li><Link className="hover:underline text-foreground/80" href="/about">About Us</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/contact">Contact</Link></li>
+              <li><Link className="hover:underline text-foreground/80" href="/category">Our Categories</Link></li>
+              <li><a className="hover:underline text-foreground/80" href="#" aria-disabled>Careers</a></li>
+              <li><a className="hover:underline text-foreground/80" href="#" aria-disabled>Blog</a></li>
             </ul>
           </nav>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-secondary-foreground/70">
+        <div className="mt-12 border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-foreground/70">
           <p>&copy; {year} LION&apos;S DEN. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="#" className="hover:underline">Privacy Policy</Link>

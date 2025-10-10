@@ -1,8 +1,12 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useCart } from '../cart/cart-context';
 
 const NavbarIcons = () => {
+  const { count } = useCart();
+
   return (
     <div className="relative hidden md:flex items-center gap-4">
       {/* Search field */}
@@ -34,14 +38,14 @@ const NavbarIcons = () => {
       </button>
 
       {/* Cart button */}
-      <button
-        type="button"
+      <Link
+        href="/cart"
         aria-label="Shopping Cart"
         className="cursor-pointer p-2 rounded-md hover:bg-muted/30 focus:outline-none focus:ring-2 focus:ring-ring relative"
       >
         <Image src="/icons/shopping%20cart.svg" alt="" width={24} height={24} aria-hidden="true" />
-        <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center" aria-label="Cart items count">3</span>
-      </button>
+        <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center" aria-label="Cart items count">{count}</span>
+      </Link>
     </div>
   );
 };
